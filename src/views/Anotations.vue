@@ -6,7 +6,7 @@
           <v-card-title class="text-center justify-center py-6">
             <v-row>
               <v-col sm="12">
-                <img src="../assets/Logo_CinzaVerde.png" alt="Logo 14º BFN" height="100px" />
+                <img src="https://i.imgur.com/PoQlkCp.png" alt="Logo 14º BFN" height="100px" />
               </v-col>
               <v-col class="mt-5" sm="12">
                 <h1 class="font-weight-bold display-2">Anotações do campo de batalha</h1>
