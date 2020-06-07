@@ -40,13 +40,13 @@ export default {
     teams: [
       {
         name: "Alfa",
-        persons: [{ name: "Cunha", militaryRank: "Sd", function: "Mg" }]
+        persons: [{ name: "Cunha", militaryRank: "Soldado", function: "Machine Gunner" }]
       },
       {
         name: "Bravo",
         persons: [
-          { name: "Cristiano", militaryRank: "Sd", function: "Mg" },
-          { name: "Cunha", militaryRank: "Sd", function: "Mg" }
+          { name: "Raffi", militaryRank: "Soldado", function: "Machine Gunner" },
+          { name: "Cunha", militaryRank: "Soldado", function: "Médico" }
         ]
       }
     ]

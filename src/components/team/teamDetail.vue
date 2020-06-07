@@ -13,14 +13,23 @@
     </v-list-item>
 
     <v-card-actions>
-        <v-spacer></v-spacer>
-      <v-btn text>Detalhes</v-btn>
+      <v-spacer></v-spacer>
+      <v-btn @click="dialog = true" text>Detalhes</v-btn>
     </v-card-actions>
+
+    <v-dialog v-model="dialog" max-width="500px" transition="dialog-transition">
+      <dialog-team :team="team"></dialog-team>
+    </v-dialog>
   </v-card>
 </template>
 
 <script>
+import dialogTeam from "./dialogTeam";
+
 export default {
+  components: {
+    dialogTeam
+  },
   computed: {
     names() {
       if (this.team.persons.length > 1)
@@ -34,6 +43,7 @@ export default {
       return this.team.name.charAt(0).toUpperCase();
     }
   },
+  data: () => ({ dialog: false }),
   props: ["team"]
 };
 </script>
