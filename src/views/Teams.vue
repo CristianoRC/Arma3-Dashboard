@@ -23,7 +23,7 @@
           <v-card-text>
             <v-row>
               <v-col sm="12" md="4" v-for="(team, index) in teams" :key="index">
-                <team-detail :team="team"></team-detail>
+                <team-detail @delete="deleteTeam" :index="index" :team="team"></team-detail>
               </v-col>
             </v-row>
           </v-card-text>
@@ -57,6 +57,9 @@ export default {
     }
   },
   methods: {
+    deleteTeam(teamIndex) {
+      this.teams.splice(teamIndex, 1);
+    },
     saveOnLocalStorage() {
       localStorage.setItem("teams", JSON.stringify(this.teams));
     },

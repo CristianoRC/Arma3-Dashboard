@@ -14,7 +14,14 @@
 
     <v-card-actions>
       <v-spacer></v-spacer>
-      <v-btn @click="dialog = true" text>Detalhes</v-btn>
+      <v-btn @click="$emit('delete',index)" text>
+        Deletar
+        <v-icon color="red" rigth>mdi-delete</v-icon>
+      </v-btn>
+      <v-btn @click="dialog = true" text>
+        Detalhes
+        <v-icon rigth>mdi-information-outline</v-icon>
+      </v-btn>
     </v-card-actions>
 
     <v-dialog v-model="dialog" max-width="500px" transition="dialog-transition">
@@ -34,8 +41,7 @@ export default {
     names() {
       if (this.team.persons.length > 1)
         return this.team.persons.reduce((acc, cur) => {
-          if (typeof acc === "string")
-            return `${acc}, ${cur.name}`;
+          if (typeof acc === "string") return `${acc}, ${cur.name}`;
           return `${cur.name}`;
         });
 
@@ -46,7 +52,7 @@ export default {
     }
   },
   data: () => ({ dialog: false }),
-  props: ["team"]
+  props: ["team", "index"]
 };
 </script>
 
