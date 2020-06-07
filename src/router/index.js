@@ -6,7 +6,7 @@ import Teams from '../views/Teams.vue'
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -26,7 +26,8 @@ Vue.use(VueRouter)
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: "history"
 })
 
 export default router
