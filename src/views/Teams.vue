@@ -40,12 +40,36 @@ export default {
     teams: [
       {
         name: "Alfa",
-        persons: [{ name: "Cunha", militaryRank: "Soldado", function: "Machine Gunner" }]
+        persons: [
+          { name: "Cunha", militaryRank: "Soldado", function: "Machine Gunner" }
+        ]
       },
       {
         name: "Bravo",
         persons: [
-          { name: "Raffi", militaryRank: "Soldado", function: "Machine Gunner" },
+          {
+            name: "Raffi",
+            militaryRank: "Soldado",
+            function: "Machine Gunner"
+          },
+          { name: "Cunha", militaryRank: "Soldado", function: "Médico" },
+          {
+            name: "Raffi",
+            militaryRank: "Soldado",
+            function: "Machine Gunner"
+          },
+          { name: "Cunha", militaryRank: "Soldado", function: "Médico" },
+          {
+            name: "Raffi",
+            militaryRank: "Soldado",
+            function: "Machine Gunner"
+          },
+          { name: "Cunha", militaryRank: "Soldado", function: "Médico" },
+          {
+            name: "Raffi",
+            militaryRank: "Soldado",
+            function: "Machine Gunner"
+          },
           { name: "Cunha", militaryRank: "Soldado", function: "Médico" }
         ]
       }

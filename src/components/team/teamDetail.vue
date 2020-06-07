@@ -34,7 +34,9 @@ export default {
     names() {
       if (this.team.persons.length > 1)
         return this.team.persons.reduce((acc, cur) => {
-          return `${acc.militaryRank} ${acc.name}, ${cur.militaryRank} ${cur.name}`;
+          if (typeof acc === "string")
+            return `${acc}, ${cur.name}`;
+          return `${cur.name}`;
         });
 
       return `${this.team.persons[0].militaryRank} ${this.team.persons[0].name}`;
