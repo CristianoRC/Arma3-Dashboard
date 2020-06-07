@@ -36,7 +36,10 @@ export default {
   components: {},
   data: () => ({
     drawer: false,
-    pages: [{ title: "Home", name: "Home", icon: "mdi-home" }]
+    pages: [
+      { title: "Home", name: "Home", icon: "mdi-home" },
+      { title: "Anotações", name: "Anotations", icon: "mdi-grease-pencil" }
+    ]
   }),
   methods: {
     to(route) {
