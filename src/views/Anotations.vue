@@ -19,16 +19,11 @@
               </v-col>
             </v-row>
           </v-card-title>
-
           <v-card-text>
             <v-tabs vertical>
               <v-tab v-for="(item, index) in anotations" :key="index">{{ item.title }}</v-tab>
               <v-tab-item v-for="(item, index) in anotations" :key="index">
-                <v-card flat>
-                  <v-card-text>
-                    <vue-editor v-model="item.content" />
-                  </v-card-text>
-                </v-card>
+                <vue-editor style="height: 100%;" v-model="item.content" />
               </v-tab-item>
             </v-tabs>
           </v-card-text>
@@ -53,12 +48,14 @@ export default {
   }),
   methods: {
     addNewAnotation() {
-      this.anotations.push({ title: `${this.anotations.length - 3}ª`, content: "" });
+      this.anotations.push({
+        title: `${this.anotations.length - 3}ª`,
+        content: ""
+      });
     }
   }
 };
 </script>
 
 <style>
-
 </style>
