@@ -12,7 +12,11 @@
                 <h1 class="font-weight-bold display-2">Anotações do campo de batalha</h1>
               </v-col>
               <v-col sm="12">
-                <v-btn small @click="addNewAnotation" color="primary">
+                <v-btn small @click="clearAnotations" color="primary">
+                  Limpar todas
+                  <v-icon right dark>mdi-delete</v-icon>
+                </v-btn>
+                <v-btn class="ml-5" small @click="addNewAnotation" color="primary">
                   Adicionar nova anotação
                   <v-icon right dark>mdi-grease-pencil</v-icon>
                 </v-btn>
@@ -59,6 +63,14 @@ export default {
     getFromLocalStorage() {
       const anotations = JSON.parse(localStorage.getItem("anotations"));
       if (anotations !== null) this.anotations = anotations;
+    },
+    clearAnotations() {
+      this.anotations = [
+        { title: "Organização", content: "" },
+        { title: "Objetivo", content: "" },
+        { title: "Localizações", content: "" },
+        { title: "Outros", content: "" }
+      ];
     }
   },
   watch: {
