@@ -13,6 +13,7 @@
     </v-list-item>
 
     <v-card-actions>
+        <v-spacer></v-spacer>
       <v-btn text>Detalhes</v-btn>
     </v-card-actions>
   </v-card>
