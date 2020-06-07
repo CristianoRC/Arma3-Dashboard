@@ -12,7 +12,7 @@
       </v-btn>
     </v-app-bar>
     <v-content>
-      <v-navigation-drawer v-model="drawer" app absolute bottom temporary>
+      <v-navigation-drawer v-model="drawer" app bottom temporary>
         <v-list nav dense>
           <v-list-item-group v-for="(page,index) in pages" :key="index">
             <v-list-item @click="to(page.name)">
