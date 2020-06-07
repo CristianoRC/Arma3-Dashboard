@@ -52,7 +52,25 @@ export default {
         title: `${this.anotations.length - 3}ª`,
         content: ""
       });
+    },
+    saveOnLocalStorage() {
+      localStorage.setItem("anotations", JSON.stringify(this.anotations));
+    },
+    getFromLocalStorage() {
+      const anotations = JSON.parse(localStorage.getItem("anotations"));
+      if (anotations !== null) this.anotations = anotations;
     }
+  },
+  watch: {
+    anotations: {
+      deep: true,
+      handler() {
+        this.saveOnLocalStorage();
+      }
+    }
+  },
+  mounted() {
+    this.getFromLocalStorage();
   }
 };
 </script>

@@ -38,7 +38,8 @@ export default {
     drawer: false,
     pages: [
       { title: "Home", name: "Home", icon: "mdi-home" },
-      { title: "Anotações", name: "Anotations", icon: "mdi-grease-pencil" }
+      { title: "Anotações", name: "Anotations", icon: "mdi-grease-pencil" },
+      { title: "Equipes", name: "Teams", icon: "mdi-pistol" }
     ]
   }),
   methods: {
